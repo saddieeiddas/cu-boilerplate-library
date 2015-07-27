@@ -26,12 +26,12 @@ The structure of this example library is as follows:
 
 #### src
 
-This is the directory where all the library is located.
+This is the directory where all the library code is located.
 
 
 #### src/library.js
 
-This is the entry point for the library library. It determines what gets imported and exported by this library.
+This is the entry point for the library. It determines what gets imported and exported by this library.
 The example `library.js` is exporting everything from `component-name/component-name.js`
 
 

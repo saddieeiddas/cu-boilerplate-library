@@ -2,6 +2,7 @@
   "name": "cu-lib-example",
   "version": "1.0.0",
   "description": "",
+  "license": "MPL-2.0",
   "main": "lib/library.js",
   "dependencies": {
     "babelify": "^6.1.3"

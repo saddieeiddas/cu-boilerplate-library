@@ -10,11 +10,14 @@ declare module 'cu-lib-example' {
 }
 
 interface LibraryStatic {
-  ComponentName: ComponentName;
+  ComponentName: ComponentNameStatic;
 }
 
 interface ComponentName {
-  new(): ComponentName;
   sayHello():void;
+}
+
+interface ComponentNameStatic {
+  new():ComponentName;
   staticSayHello() :void;
 }
