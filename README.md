@@ -3,7 +3,7 @@ cu-lib-example
 
 > example CU library structure
 
-===
+---
 
 Installation
 ------------
@@ -14,15 +14,13 @@ Clone the Repository and run:
 npm install
 ```
 
-===
+---
 
 
 Structure
 ---------
 
 The structure of this example library is as follows:
-
----
 
 #### src
 
@@ -65,37 +63,13 @@ This is what would be imported by `TypeScript` or another library which requires
 This is a testing/development/playground area which can be used to help develop the module and test things work.
 
 
-===
-
-Gulp Configuration
-------------------
-
-There is a `config` variable in `gulpfile.js` which can be used to easily configure the build process and file names .
-
+---
 
 Developing
 ----------
 
-To develop there are a number of `gulp` tasks configured:
+The build process is provided by [cu-ui-build-tools](https://github.com/saddieeiddas/cu-ui-build-tools#library-builder)
 
+The build can be configured in `build-config.js`
 
-#### gulp server
-
-This will create a connect server, you can then access this server via at http://localhost:9000/example/
-This will serve the `example/index.html` file which can be used to test/develop the library.
-
-
-#### gulp watch
-
-This will watch the src directory and compile the development bundle file on changes.
-This paired with the server and `example/index.html` should allow for easy testing/development.
-
-
-#### gulp build
-
-This will build the `bundle` and `lib` directories based on the `src` contents.
-
-
-#### gulp lint
-
-This will lint the `src` directory using `eslint`.
+You can view the gulp tasks here https://github.com/saddieeiddas/cu-ui-build-tools#library-builder
