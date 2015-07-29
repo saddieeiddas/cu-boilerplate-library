@@ -10,14 +10,14 @@ declare module 'cu-ui-boilerplate-library' {
 }
 
 interface LibraryStatic {
-  BoilerplateComponent: BoilerplateComponentStatic;
+  BoilerplateModule: BoilerplateModuleStatic;
 }
 
-interface BoilerplateComponent {
+interface BoilerplateModule {
   sayHello():void;
 }
 
-interface BoilerplateComponentStatic {
+interface BoilerplateModuleStatic {
   new():BoilerplateComponent;
   staticSayHello() :void;
 }
