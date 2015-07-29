@@ -6,6 +6,7 @@
 
 module.exports = {
   type: 'library',
+  engine: 'ts',
   path: __dirname,
   name: 'cu-ui-boilerplate-library',
 };
