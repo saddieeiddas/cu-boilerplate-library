@@ -70,6 +70,6 @@ Developing
 
 The build process is provided by [cu-ui-build-tools](https://github.com/saddieeiddas/cu-ui-build-tools#library-builder)
 
-The build can be configured in `build-config.js`
+The build can be configured in `cu-build.js`
 
 You can view the gulp tasks here https://github.com/saddieeiddas/cu-ui-build-tools#library-builder

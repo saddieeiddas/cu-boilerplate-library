@@ -1,4 +1,5 @@
 module.exports = {
+  type: 'library',
   srcGlob: 'src/**/*.js',
   bundleDir: 'bundle',
   libDir: 'lib',
