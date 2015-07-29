@@ -18,6 +18,6 @@ interface BoilerplateModule {
 }
 
 interface BoilerplateModuleStatic {
-  new():BoilerplateComponent;
+  new():BoilerplateModule;
   staticSayHello() :void;
 }
