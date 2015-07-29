@@ -6,7 +6,7 @@
 
 module.exports = {
   buildType: 'library',
-  srcGlob: 'src/**/*.js',
+  srcGlob: ['src/**/*.js', 'src/**/*.jsx'],
   bundleDir: 'bundle',
   libDir: 'lib',
   libraryName: 'cu-lib-example',
