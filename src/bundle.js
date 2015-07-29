@@ -6,4 +6,4 @@
 
 import * as library from './library';
 
-window.LibraryName = library;
+window.BoilerplateLibrary = library;

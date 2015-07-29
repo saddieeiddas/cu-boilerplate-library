@@ -9,7 +9,7 @@ module.exports = {
   srcGlob: ['src/**/*.js', 'src/**/*.jsx'],
   bundleDir: 'bundle',
   libDir: 'lib',
-  libraryName: 'cu-lib-example',
+  libraryName: 'cu-ui-boilerplate-library',
   libraryFile: 'src/library.js',
   definitionFile: 'src/library.d.ts',
   bundleFile: 'src/bundle.js',

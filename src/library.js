@@ -4,4 +4,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-export * from './component-name/component-name';
+module.exports = {
+  BoilerplateModule: require('./boilerplate-module/boilerplate-module'),
+};

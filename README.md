@@ -1,7 +1,7 @@
-cu-lib-example
-==============
+cu-ui-boilerplate-library
+=========================
 
-> example CU library structure
+> example CU-UI library structure
 
 ---
 
@@ -30,7 +30,7 @@ This is the directory where all the library code is located.
 #### src/library.js
 
 This is the entry point for the library. It determines what gets imported and exported by this library.
-The example `library.js` is exporting everything from `component-name/component-name.js`
+The example `library.js` is exporting everything from `boilerplate-module/boilerplate-module.js`
 
 
 #### src/library.d.ts
@@ -58,9 +58,10 @@ These are also the files which should be included as scripts in basic ui modules
 This is where the `es5` compiled `src` will be located. It is also the main entry point for `package.json`.
 This is what would be imported by `TypeScript` or another library which requires this one.
 
-#### example
+#### test
 
 This is a testing/development/playground area which can be used to help develop the module and test things work.
+Would potentially change this to a testing framework, so as things can be automated.
 
 
 ---

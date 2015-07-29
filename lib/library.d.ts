@@ -4,20 +4,20 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-declare module 'cu-lib-example' {
+declare module 'cu-ui-boilerplate-library' {
   var libraryStatic: LibraryStatic;
   export = libraryStatic;
 }
 
 interface LibraryStatic {
-  ComponentName: ComponentNameStatic;
+  BoilerplateComponent: BoilerplateComponentStatic;
 }
 
-interface ComponentName {
+interface BoilerplateComponent {
   sayHello():void;
 }
 
-interface ComponentNameStatic {
-  new():ComponentName;
+interface BoilerplateComponentStatic {
+  new():BoilerplateComponent;
   staticSayHello() :void;
 }
