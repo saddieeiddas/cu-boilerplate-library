@@ -4,9 +4,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-'use strict';
+import {BoilerplateModule} from './boilerplate-module/boilerplate-module';
 
 module.exports = {
-  BoilerplateModule: require('./boilerplate-module/boilerplate-module')
+  BoilerplateModule: BoilerplateModule,
 };
-//# sourceMappingURL=library.js.map

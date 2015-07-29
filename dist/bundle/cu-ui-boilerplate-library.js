@@ -63,8 +63,10 @@ window.BoilerplateLibrary = library;
 
 'use strict';
 
+var _boilerplateModuleBoilerplateModule = require('./boilerplate-module/boilerplate-module');
+
 module.exports = {
-  BoilerplateModule: require('./boilerplate-module/boilerplate-module')
+  BoilerplateModule: _boilerplateModuleBoilerplateModule.BoilerplateModule
 };
 
 },{"./boilerplate-module/boilerplate-module":1}]},{},[2])
