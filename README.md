@@ -45,22 +45,25 @@ property (note this can point to the `dist/lib/library.d.ts` as it will be copie
 This is the entry point for the web bundle of the library. This is where things should be bound to the `window` object
 so that standard ui modules can just include this script and get access to the library.
 
+#### src/library.ui
+
+This is the ".ui" file for the library.
+
+
 
 ---
 
-#### dist/bundle
+#### dist
 
+This is the compiled directory where assets are copied to.
 This is where the `browserify` and `babelify` bundles will be located. They are built from `src/bundle.js`.
 These are also the files which should be included as scripts in basic ui modules which don't use gulp or typescript.
+This is also where the `stylus` will be built too.
 
-#### dist/lib
+#### lib
 
 This is where the `es5` compiled `src` will be located. It is also the main entry point for `package.json`.
 This is what would be imported by `TypeScript` or another library which requires this one.
-
-#### dist/css
-
-This is where the `styl` is compiled to from `src/style`
 
 #### test
 

@@ -5,15 +5,7 @@
  */
 
 module.exports = {
-  buildType: 'library',
-  jsPaths: ['src/js/**/*.js', 'src/js/**/*.jsx'],
-  stylePaths: ['src/style/**/*.styl'],
-  bundleDir: 'dist/bundle',
-  libDir: 'dist/lib',
-  cssDir: 'dist/css',
-  libraryName: 'cu-ui-boilerplate-library',
-  libraryFile: 'src/js/library.js',
-  definitionFile: 'src/js/library.d.ts',
-  bundleFile: 'src/js/bundle.js',
-  serverPort: 9000
+  type: 'library',
+  path: __dirname,
+  name: 'cu-ui-boilerplate-library',
 };

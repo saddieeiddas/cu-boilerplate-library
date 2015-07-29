@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "license": "MPL-2.0",
-  "main": "dist/lib/library.js",
+  "main": "lib/library.js",
   "devDependencies": {
     "gulp": "^3.9.0",
     "cu-ui-build-tools": "git+https://github.com/saddieeiddas/cu-ui-build-tools.git#master"
   },
   "typescript": {
-    "definition": "dist/lib/library.d.ts"
+    "definition": "lib/library.d.ts"
   }
 }
