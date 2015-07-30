@@ -6,6 +6,6 @@
 
 import BoilerplateModuleImport = require('./boilerplate-module/boilerplate-module');
 
-export module BoilerplateLibrary {
-    export var BoilerplateModule = BoilerplateModuleImport.BoilerplateModule;
+export class BoilerplateLibrary {
+    static BoilerplateModule = BoilerplateModuleImport.BoilerplateModule;
 }
