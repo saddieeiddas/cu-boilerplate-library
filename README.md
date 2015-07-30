@@ -22,34 +22,19 @@ Structure
 
 The structure of this example library is as follows:
 
-#### src
+#### `src`
 
-This is the directory where all the javascript and stylus is located.
+This is the directory where all the typescript and stylus is located.
 This will build to the dist folder via gulp.
 
-
-#### src/js/library.js
+#### `src/ts/library.ts`
 
 This is the entry point for the library. It determines what gets imported and exported by this library.
-The example `library.js` is exporting `boilerplate-module/boilerplate-module.js`
 
-
-#### src/js/library.d.ts
-
-This is the TypeScript definition file for the library. This is also referenced in `package.json` under the `typescript`
-property (note this can point to the `dist/lib/library.d.ts` as it will be copied there during a build.
-
-
-#### src/js/bundle.js
+#### src/ts/bundle.js
 
 This is the entry point for the web bundle of the library. This is where things should be bound to the `window` object
 so that standard ui modules can just include this script and get access to the library.
-
-#### src/library.ui
-
-This is the ".ui" file for the library.
-
-
 
 ---
 

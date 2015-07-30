@@ -1,4 +1,5 @@
 {
   "type": "library",
-  "name": "cu-ui-boilerplate-library"
+  "name": "cu-ui-boilerplate-library",
+  "targetDirectory": "cu"
 }
