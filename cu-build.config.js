@@ -6,5 +6,7 @@ module.exports = {
   type: 'library',
   path: __dirname,
   name: 'cu-ui-boilerplate-library',
-  publishDirectory: "cu-ui-boilerplate-library"
+  publish: {
+    target: 'libs/cu-ui-boilerplate-library'
+  }
 };

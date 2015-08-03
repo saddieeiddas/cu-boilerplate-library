@@ -41,7 +41,7 @@ so that standard ui modules can just include this script and get access to the l
 #### dist
 
 This is the compiled directory where assets are copied to.
-This is where the `browserify` and `babelify` bundles will be located. They are built from `src/bundle.js`.
+This is where the `browserify` and `babelify` bundles will be located. They are built from `src/main-bundle.js`.
 These are also the files which should be included as scripts in basic ui modules which don't use gulp or typescript.
 This is also where the `stylus` will be built too.
 
