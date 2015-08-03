@@ -2,10 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/// <reference path="tsd.d.ts" />
-
-import BoilerplateModuleImport = require('./boilerplate-module/boilerplate-module');
+/// <reference path="../typings/tsd.d.ts" />
 
 export class BoilerplateLibrary {
-    static BoilerplateModule = BoilerplateModuleImport.BoilerplateModule;
+    public static staticSayHello() {
+        console.log('BoilerplateLibrary staticSayHello');
+    }
+    public sayHello() {
+        console.log('BoilerplateLibrary sayHello');
+    }
 }
