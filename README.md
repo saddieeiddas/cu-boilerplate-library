@@ -1,4 +1,4 @@
-cu-ui-boilerplate-library
+cu-boilerplate-library
 =========================
 
 > example CU-UI library structure
@@ -27,11 +27,11 @@ The structure of this example library is as follows:
 This is the directory where all the typescript and stylus is located.
 This will build to the dist folder via gulp.
 
-#### `src/ts/library.ts`
+#### `src/js/main.js`
 
 This is the entry point for the library. It determines what gets imported and exported by this library.
 
-#### `src/ts/bundle.ts`
+#### `src/ts/main-bundle.ts`
 
 This is the entry point for the web bundle of the library. This is where things should be bound to the `window` object
 so that standard ui modules can just include this script and get access to the library.
@@ -61,8 +61,8 @@ Would potentially change this to a testing framework, so as things can be automa
 Developing
 ----------
 
-The build process is provided by [cu-ui-build-tools](https://github.com/saddieeiddas/cu-ui-build-tools#library-builder)
+The build process is provided by [cu-build-tools](https://github.com/CUModSquad/cu-build-tools#componentlibrary---builder)
 
 The build can be configured in `cu-build.config.js`
 
-You can view the gulp tasks here https://github.com/saddieeiddas/cu-ui-build-tools#library-builder
+You can view the gulp tasks here https://github.com/CUModSquad/cu-build-tools#componentlibrary---builder

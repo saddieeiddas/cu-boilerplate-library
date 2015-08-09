@@ -1,12 +1,12 @@
 {
-  "name": "cu-ui-boilerplate-library",
+  "name": "cu-boilerplate-library",
   "version": "1.0.0",
   "description": "",
   "license": "MPL-2.0",
   "main": "lib/main.js",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "cu-ui-build-tools": "git+https://github.com/saddieeiddas/cu-ui-build-tools.git#master"
+    "cu-build-tools": "git+https://github.com/CUModSquad/cu-build-tools.git#master"
   },
   "typescript": {
     "definition": "lib/main.d.ts"
