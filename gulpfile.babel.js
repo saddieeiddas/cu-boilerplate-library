@@ -4,6 +4,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-import * as library from './main';
+import gulp from 'gulp';
+import buildConfig from './cu-build.config.js';
+import buildTools from 'cu-build-tools';
 
-window.BoilerplateLibrary = library.BoilerplateLibrary;
+buildTools.auto(gulp, buildConfig);

@@ -1,5 +1,5 @@
 cu-boilerplate-library
-=========================
+======================
 
 > example CU-UI library structure
 

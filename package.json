@@ -1,12 +1,22 @@
 {
   "name": "cu-boilerplate-library",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "license": "MPL-2.0",
   "main": "lib/main.js",
+  "contributors": [
+    "saddieeiddas <saddie.eiddas@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csegames/cu-boilerplate-library.git"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.22",
     "gulp": "^3.9.0",
-    "cu-build-tools": "git+https://github.com/CUModSquad/cu-build-tools.git#master"
+    "cu-ui-build-tools": "git+https://github.com/CUModSquad/cu-build-tools.git#master"
   },
   "typescript": {
     "definition": "lib/main.d.ts"
