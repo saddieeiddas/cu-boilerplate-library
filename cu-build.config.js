@@ -4,12 +4,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
- module.exports = {
+var name = 'cu-boilerplate-library';
+
+module.exports = {
   type: 'library',
   path: __dirname,
-  name: 'cu-boilerplate-library',
-  publish: {
-    target: 'libs/cu-boilerplate-library'
-  },
- }
- 
+  name: name,
+};
