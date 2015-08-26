@@ -61,8 +61,8 @@ Would potentially change this to a testing framework, so as things can be automa
 Developing
 ----------
 
-The build process is provided by [cu-build-tools](https://github.com/CUModSquad/cu-build-tools#componentlibrary---builder)
+The build process is provided by [cu-build-tools](https://github.com/CUModSquad/cu-build-tools#modulelibrary---builder)
 
 The build can be configured in `cu-build.config.js`
 
-You can view the gulp tasks here https://github.com/CUModSquad/cu-build-tools#componentlibrary---builder
+You can view the gulp tasks here https://github.com/CUModSquad/cu-build-tools#modulelibrary---builder

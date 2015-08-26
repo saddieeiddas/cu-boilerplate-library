@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" 
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ProjectGuid>{6AE2C434-CAB1-4A81-BF8B-4D6F6CC8194F}</ProjectGuid>
@@ -27,8 +29,10 @@
     <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
   <ItemGroup>
-  
-  <Content Include="src\js\main-bundle.js"/><Content Include="src\js\main.js"/><Content Include="src\style\library.styl"/></ItemGroup>
+    <Content Include="src\style\library.styl"/>
+    <TypeScriptCompile Include="src\ts\main-bundle.ts"/>
+    <TypeScriptCompile Include="src\ts\main.ts"/>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -39,8 +43,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')"/>
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''"/>
-  <Import Project="$(MSBuildProjectDirectory)\msbuild\gulp.targets"/>
-  
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
@@ -52,59 +54,46 @@
           <IISUrl>http://localhost:1336/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  
   <!-- ************* GULP BUILD ************* -->
   <Target Name="Node">
-        <Exec Command="$(WINDIR)\system32\where.exe node" ContinueOnError="true" IgnoreExitCode="true" ConsoleToMsBuild="true">
-            <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
-            <Output TaskParameter="ConsoleOutput" PropertyName="NodePath"/>
-        </Exec>
-        
-        <PropertyGroup Condition=" '$(ExecExitCode)' == '0' AND '$(NodePath)' != '' ">
-            <NodePath>$([System.IO.Path]::GetDirectoryName('$(NodePath)'))</NodePath>
-        </PropertyGroup>
-        
-        <Error Condition=" '$(NodePath)' == '' OR !Exists('$(NodePath)') " Text="Node.js is not installed, please install it from https://nodejs.org/."/>
-    </Target>
-
-    <Target Name="Gulp" DependsOnTargets="Node">
-        <Exec Command="$(WINDIR)\system32\where.exe gulp.cmd" ContinueOnError="true" IgnoreExitCode="true" ConsoleToMsBuild="true">
-            <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
-            <Output TaskParameter="ConsoleOutput" PropertyName="GulpPath"/>
-        </Exec>
-        
-        <Message Importance="high" Text="Installing Gulp..." Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') "/>
-        
-        <Exec Command="$(WINDIR)\system32\cmd.exe /C &quot;&quot;$(NodePath)\npm.cmd&quot; install -g gulp&quot;" IgnoreExitCode="true" Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') ">
-            <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
-        </Exec>
-        
-        <Error Condition=" '$(ExecExitCode)' != '0' " Text="Failed to automatically install Gulp, please run `npm install gulp -g` from a commandline."/>
-                
-        <Exec Command="$(WINDIR)\system32\where.exe gulp.cmd" ContinueOnError="true" IgnoreExitCode="true" ConsoleToMsBuild="true" Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') ">
-            <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
-            <Output TaskParameter="ConsoleOutput" PropertyName="GulpPath"/>
-        </Exec>
-        
-        <Error Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') " Text="Can't find Gulp even after installing it, please run `npm install gulp -g` from a commandline."/>
-        
-        <PropertyGroup Condition=" '$(GulpPath)' != '' ">
-            <GulpPath>$([System.IO.Path]::GetDirectoryName('$(GulpPath)'))</GulpPath>
-        </PropertyGroup>
-    </Target>
-    
-    <Target Name="GulpBuild" DependsOnTargets="Gulp" BeforeTargets="Build">
-        <Exec Command=" $(WINDIR)\system32\cmd.exe /C &quot;&quot;$(GulpPath)\gulp.cmd&quot; build --vsgen false&quot; " ContinueOnError="true" IgnoreExitCode="true" WorkingDirectory="$(MSBuildProjectDirectory)">
-            <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
-        </Exec>
-        <Error Condition=" '$(ExecExitCode)' != '0' " Text="Gulp indicated a failure."/>
-    </Target>
-  
+    <Exec Command="$(WINDIR)\system32\where.exe node" ContinueOnError="true" IgnoreExitCode="true" ConsoleToMsBuild="true">
+      <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
+      <Output TaskParameter="ConsoleOutput" PropertyName="NodePath"/>
+    </Exec>
+    <PropertyGroup Condition=" '$(ExecExitCode)' == '0' AND '$(NodePath)' != '' ">
+      <NodePath>$([System.IO.Path]::GetDirectoryName('$(NodePath)'))</NodePath>
+    </PropertyGroup>
+    <Error Condition=" '$(NodePath)' == '' OR !Exists('$(NodePath)') " Text="Node.js is not installed, please install it from https://nodejs.org/."/>
+  </Target>
+  <Target Name="Gulp" DependsOnTargets="Node">
+    <Exec Command="$(WINDIR)\system32\where.exe gulp.cmd" ContinueOnError="true" IgnoreExitCode="true" ConsoleToMsBuild="true">
+      <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
+      <Output TaskParameter="ConsoleOutput" PropertyName="GulpPath"/>
+    </Exec>
+    <Message Importance="high" Text="Installing Gulp..." Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') "/>
+    <Exec Command="$(WINDIR)\system32\cmd.exe /C &quot;&quot;$(NodePath)\npm.cmd&quot; install -g gulp&quot;" IgnoreExitCode="true" Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') ">
+      <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
+    </Exec>
+    <Error Condition=" '$(ExecExitCode)' != '0' " Text="Failed to automatically install Gulp, please run `npm install gulp -g` from a commandline."/>
+    <Exec Command="$(WINDIR)\system32\where.exe gulp.cmd" ContinueOnError="true" IgnoreExitCode="true" ConsoleToMsBuild="true" Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') ">
+      <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
+      <Output TaskParameter="ConsoleOutput" PropertyName="GulpPath"/>
+    </Exec>
+    <Error Condition=" '$(GulpPath)' == '' OR !Exists('$(GulpPath)') " Text="Can't find Gulp even after installing it, please run `npm install gulp -g` from a commandline."/>
+    <PropertyGroup Condition=" '$(GulpPath)' != '' ">
+      <GulpPath>$([System.IO.Path]::GetDirectoryName('$(GulpPath)'))</GulpPath>
+    </PropertyGroup>
+  </Target>
+  <Target Name="GulpBuild" DependsOnTargets="Gulp" BeforeTargets="Build">
+    <Exec Command=" $(WINDIR)\system32\cmd.exe /C &quot;&quot;$(GulpPath)\gulp.cmd&quot; build --vsgen false&quot; " ContinueOnError="true" IgnoreExitCode="true" WorkingDirectory="$(MSBuildProjectDirectory)">
+      <Output TaskParameter="ExitCode" PropertyName="ExecExitCode"/>
+    </Exec>
+    <Error Condition=" '$(ExecExitCode)' != '0' " Text="Gulp indicated a failure."/>
+  </Target>
 </Project>
