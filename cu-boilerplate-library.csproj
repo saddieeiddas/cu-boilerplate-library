@@ -29,7 +29,7 @@
     <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\ts\main-bundle.ts"/>
+    <TypeScriptCompile Include="src\ts\main.bundle.ts"/>
     <TypeScriptCompile Include="src\ts\main.ts"/>
     <Content Include="src\sass\library.sass"/>
   </ItemGroup>
