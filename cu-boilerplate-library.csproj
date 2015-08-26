@@ -29,9 +29,9 @@
     <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="src\style\library.styl"/>
     <TypeScriptCompile Include="src\ts\main-bundle.ts"/>
     <TypeScriptCompile Include="src\ts\main.ts"/>
+    <Content Include="src\sass\library.sass"/>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
