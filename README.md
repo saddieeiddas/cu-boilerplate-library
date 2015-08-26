@@ -31,7 +31,7 @@ This will build to the dist folder via gulp.
 
 This is the entry point for the library. It determines what gets imported and exported by this library.
 
-#### `src/ts/main-bundle.ts`
+#### `src/ts/main.bundle.ts`
 
 This is the entry point for the web bundle of the library. This is where things should be bound to the `window` object
 so that standard ui modules can just include this script and get access to the library.
