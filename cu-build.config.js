@@ -10,4 +10,15 @@ module.exports = {
   type: 'library',
   path: __dirname,
   name: name,
+  lib: {
+    sass: true,
+    sass_base: 'sass',
+    sass_dest: '',
+    copy: true,
+  },
+  bundle: {
+    base: 'js',
+    sass_base: 'sass',
+    sass_dest: '',
+  },
 };
