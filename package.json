@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "cu-boilerplate-library",
   "version": "0.1.0",
   "description": "",
@@ -8,13 +7,23 @@
   "contributors": [
     "saddieeiddas <saddie.eiddas@gmail.com>"
   ],
+  "keywords": [
+    "Camelot",
+    "Unchained",
+    "cu",
+    "cu-ui"
+  ],
+  "files": [
+    "lib/",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/csegames/cu-boilerplate-library.git"
   },
-  "dependencies": {
-    "cu-core": "^0.1.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
     "cu-build-tools": "git+https://github.com/CUModSquad/cu-build-tools.git#master"
