@@ -2,8 +2,8 @@
 
 declare module 'cu-boilerplate-library' {
     export class BoilerplateLibrary {
-        static staticSayHello(): void;
-        sayHello(): void;
+        static staticTest(): void;
+        test(): void;
     }
 }
 

@@ -4,13 +4,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-/// <reference path="../tsd/tsd.d.ts" />
-
 export class BoilerplateLibrary {
-  static staticSayHello() {
-    console.log('staticSayHello');
+  static staticTest() {
+    console.log('staticTest');
   }
-  sayHello() {
-    console.log('sayHello');
+  test() {
+    console.log('test');
   }
 }
