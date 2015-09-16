@@ -1,7 +1,7 @@
 {
   "name": "cu-boilerplate-library",
   "version": "0.1.0",
-  "description": "",
+  "description": "Camelot Unchained UI - Boilerplate Library",
   "license": "MPL-2.0",
   "main": "lib/main.js",
   "contributors": [
@@ -21,12 +21,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/csegames/cu-boilerplate-library.git"
+    "url": "https://github.com/CUModSquad/cu-boilerplate-library.git"
   },
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
-    "cu-build-tools": "git+https://github.com/CUModSquad/cu-build-tools.git#master"
+    "cu-build-tools": "^0.1.8"
   },
   "typescript": {
     "definition": "lib/cu-boilerplate-library.d.ts"
