@@ -62,11 +62,11 @@ the library and test things work. Will ideally contain unit tests.
 Developing
 ----------
 
-The build process is provided by [cu-build-tools](1)
+The build process is provided by [cu-build-tools][1]
 
 The build can be configured in `cu-build.config.js`
 
-You can view the gulp tasks [here](1)
+You can view the gulp tasks [here][1]
 
 
 [1]: https://github.com/CUModSquad/cu-build-tools#modulelibrary---builder
